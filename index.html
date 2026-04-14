@@ -55,7 +55,6 @@
       .nav-inner { opacity: 1; transform: none; transition: none; }
     }
 
-    /* NOISE CANVAS */
     #noise-canvas {
       position: fixed; inset: 0;
       width: 100%; height: 100%;
@@ -66,7 +65,6 @@
       image-rendering: auto;
     }
 
-    /* CURSOR */
     .cursor {
       position: fixed;
       width: 10px; height: 10px;
@@ -90,7 +88,6 @@
     }
     body:hover .cursor-ring { opacity: 1; }
 
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 500;
@@ -123,7 +120,6 @@
     }
     .nav-links a:hover { color: var(--accent); }
 
-    /* HERO */
     #hero {
       min-height: 100vh;
       display: flex; flex-direction: column; justify-content: flex-end;
@@ -215,7 +211,6 @@
       background: linear-gradient(to bottom, transparent, var(--muted));
     }
 
-    /* VISIT CARD — моушн-визитка продакшена */
     section#visitcard {
       position: relative;
       padding: 72px 0 96px;
@@ -274,7 +269,6 @@
       background: #0c0a08;
     }
 
-    /* SECTIONS */
     section { padding: 120px 0; }
     .section-label {
       font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
@@ -286,7 +280,6 @@
       height: 1px; background: var(--border);
     }
 
-    /* WORK */
     #work { border-top: 1px solid var(--border); position: relative; }
     #work::before {
       content: ''; position: absolute; inset: 0;
@@ -541,7 +534,6 @@
     .case-year { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.35; }
     .case-item--video:not(.is-expanded) .case-year { font-size: 11px; }
 
-    /* CONTACT */
     #contact {
       border-top: 1px solid var(--border);
       min-height: 60vh; display: flex; flex-direction: column;
@@ -565,7 +557,6 @@
       filter: drop-shadow(0 0 24px rgba(232, 179, 57,.55));
     }
 
-    /* Contact links — interactive */
     .contact-links { display: flex; flex-direction: column; }
     .contact-link {
       display: flex; justify-content: space-between; align-items: center;
@@ -576,7 +567,6 @@
     }
     .contact-link:last-child { border-bottom: 1px solid var(--border); }
 
-    /* Gradient background fill on hover */
     .contact-link::before {
       content: '';
       position: absolute; inset: 0;
@@ -613,7 +603,6 @@
     .contact-link--email:hover .contact-link-val { color: var(--email-color); }
     .contact-link--tg:hover    .contact-link-val { color: var(--tg-color); }
 
-    /* "Скопировать" hint — slides in on hover */
     .contact-copy-hint {
       font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
       color: var(--muted); position: relative;
@@ -624,13 +613,11 @@
     .contact-link--email:hover .contact-copy-hint { color: var(--email-color); }
     .contact-link--tg:hover    .contact-copy-hint { color: var(--tg-color); }
 
-    /* Flash when copied */
     .contact-link.copied .contact-link-val {
       color: var(--accent) !important;
       filter: drop-shadow(0 0 10px rgba(232, 179, 57,.7));
     }
 
-    /* Toast */
     .copy-toast {
       position: fixed; bottom: 40px; left: 50%;
       transform: translateX(-50%) translateY(16px);
@@ -646,7 +633,6 @@
       opacity: 1; transform: translateX(-50%) translateY(0);
     }
 
-    /* FOOTER */
     footer {
       padding: 32px 0; border-top: 1px solid var(--border);
     }
@@ -657,7 +643,6 @@
     .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: .1em; color: var(--muted); }
     .footer-copy { font-size: 12px; color: var(--muted); letter-spacing: .06em; }
 
-    /* ANIMATIONS */
     @keyframes fadeUp { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
     @keyframes fadeUpSoft { from { opacity:0; transform:translateY(36px); } to { opacity:1; transform:translateY(0); } }
     @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -679,7 +664,6 @@
       .case-item--video.is-expanded.is-opening { animation: none !important; }
     }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .nav-inner { padding-left: 24px; padding-right: 24px; }
       .site-wrap,
@@ -710,7 +694,6 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- NAV -->
   <nav>
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">ФАХРУТДИНОВ ИВАН</a>
@@ -721,7 +704,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section id="hero">
     <div class="hero-glow"></div>
     <div class="site-wrap site-wrap--hero">
@@ -744,17 +726,12 @@
       <p class="visitcard-copy reveal">Анимированная карточка Pura Production.</p>
       <div class="visitcard-stage reveal">
         <div class="visitcard-frame">
-          <video id="visitcard-video" autoplay muted loop playsinline webkit-playsinline preload="auto" title="Pura Production — моушн-визитка">
-  <source src="video/animation-led.mp4.mp4" type="video/mp4">
-  Ваш браузер не поддерживает видео.
-  <a href="video/animation 07 led 1.mp4">Скачать видео</a>
-</video>
+          <video id="visitcard-video" src="video/animation-led.mp4.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" title="Pura Production — моушн-визитка"></video>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
   <section id="work">
     <div class="site-wrap">
       <div class="section-label reveal">Портфолио</div>
@@ -770,10 +747,7 @@
         <button type="button" class="case-expand-hit" aria-label="Развернуть видео"></button>
         <button type="button" class="case-collapse" aria-label="Свернуть" title="Свернуть">×</button>
         <div class="case-thumb">
-          <video class="case-video" playsinline muted loop preload="metadata">
-  <source src="video/Comp 1_4.mp4" type="video/mp4">
-  <a href="video/Comp 1_4.mp4">Скачать видео</a>
-</video>
+          <video class="case-video" src="video/comp1_4.mp4" playsinline muted loop preload="metadata"></video>
         </div>
         <div class="case-play-hint" aria-hidden="true"><span>Развернуть</span></div>
         <div class="case-overlay">
@@ -786,10 +760,7 @@
         <button type="button" class="case-expand-hit" aria-label="Развернуть видео"></button>
         <button type="button" class="case-collapse" aria-label="Свернуть" title="Свернуть">×</button>
         <div class="case-thumb">
-          <video class="case-video" playsinline muted loop preload="metadata">
-  <source src="video/сцена 1.mp4" type="video/mp4">
-  <a href="video/сцена 1.mp4">Скачать видео</a>
-</video>
+          <video class="case-video" src="video/scena1.mp4" playsinline muted loop preload="metadata"></video>
         </div>
         <div class="case-play-hint" aria-hidden="true"><span>Развернуть</span></div>
         <div class="case-overlay">
@@ -802,7 +773,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="site-wrap contact-inner">
       <div class="section-label">Контакт</div>
@@ -825,7 +795,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="site-wrap site-wrap--footer">
       <span class="footer-logo">PURA PRODUCTION</span>
@@ -862,7 +831,6 @@
       }
     }
 
-    /* Шум: маленький буфер + редкая отрисовка; в паре с Lenis — один RAF на кадр */
     var nc = document.getElementById('noise-canvas');
     var cx = nc.getContext('2d', { alpha: true });
     var NOISE_SCALE = 0.32;
@@ -1006,7 +974,6 @@
       });
     })();
 
-    // CURSOR
     const cursor = document.getElementById('cursor');
     const ring   = document.getElementById('cursorRing');
     let mx=0, my=0, rx=0, ry=0;
@@ -1028,7 +995,6 @@
       });
     });
 
-    // VISIT CARD VIDEO — автозапуск
     (function initVisitcardVideo() {
       var v = document.getElementById('visitcard-video');
       if (!v) return;
@@ -1050,7 +1016,6 @@
       }
     })();
 
-    // SCROLL REVEAL
     const revEls = document.querySelectorAll('.reveal');
     const revObs = new IntersectionObserver(entries => {
       entries.forEach((e, i) => {
@@ -1062,7 +1027,6 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
     revEls.forEach(el => revObs.observe(el));
 
-    // COPY TO CLIPBOARD
     function copyContact(text, el) {
       navigator.clipboard.writeText(text).then(() => {
         el.classList.add('copied');
